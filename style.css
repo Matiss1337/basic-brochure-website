@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&display=swap');
+:root {
+  --first-color: #dee2e6;
+  --second-color: #ced4da;
+  --third-color: #adb5bd;
+  --fourth-color: #495057;
+  --fifth-color: #3c6e71;
+}
+
+
+
+body{
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  font-family: 'PT Serif', serif;
+}
+
+
+img{
+  max-width: 100%;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+
+.ref img {
+  height: 340px;
+  width: 260px;
+}
+ 
+.ref-info :nth-child(2){
+  padding: 2px;
+  background-color: var(--second-color);
+}
+
+.job{
+  padding: 20px 5%;
+  position: relative;
+  display: inline-block;
+}
+
+.job img{
+  display: block;
+}
+
+.job .info{
+  position: absolute;
+  top: 12%;
+  left: 60%;
+  transform: scale(140%);
+}
+
+.job.wide .info{
+  position: absolute;
+  top: 12%;
+  left: 40%;
+  transform: scale(140%);
+}
+
+.project{
+  padding: 80px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.projects :nth-child(2){
+  flex-direction: row-reverse;
+}
+
+
+.wide{
+  background-color: var(--second-color);
+  max-width: max-content;
+}
+
+.wide img{
+  transform: scaleX(-1)
+}
+
+.info{
+  padding: 0 15px;
+  letter-spacing: 1px;
+  line-height: 2rem;
+  max-width: max-content;
+}
+
+.info h2{
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.welcome{
+  padding: 70px 8%;
+  border-bottom: 30px solid var(--second-color);
+}
+
+.welcome h2{
+  letter-spacing: 1px;
+  line-height: 2.4rem;
+}
+
+.ref{
+  border-top: 30px solid var(--second-color);
+  padding: 20px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.refCard{
+  max-width: 260px;
+  padding: 20px;
+}
+
+p{
+  text-align: right;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.container{
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+.container > * {
+  padding: 42px;
+}
+
+.contacts, .form{
+  padding: 3%;
+}
+
+.contacts{
+  min-width: 140px;
+}
+.form{
+width: 300px;
+max-width: 100%;
+display: flex;
+justify-content: center;
+}
+
+.open > * {
+  max-width: 300px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+.visit{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.day{
+  min-width: 200px;
+}
+.day :nth-child(1){
+font-weight: bold;
+}
+
+.map, .open{
+  padding: 4%;
+}
+
+.visit{
+    border-top: 30px solid var(--second-color);
+}
+
+.input{
+  width: 20rem;
+  height: 2rem;
+}
+
+.msg{
+  height: 4rem;
+}
+button{
+  width: 20rem;
+  height: 1.5rem;
+}
+
+.contacts{
+letter-spacing: 2px;
+font-size: 23px;
+}
+
+.logo{
+  transform: scale(120%);
+  display: block;
+}
+.nav{
+  background-color: var(--second-color);
+  height: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+a{
+  font-size: 20px;
+  font-size: xx-large;
+  text-decoration: none;
+  color: black;
+  transition: 5sec ease;
+}
+
+
+a:hover{
+  color: var(--fifth-color);
+}
+
+footer{
+  background-color: var(--second-color);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.navMenu {
+  display: flex;
+  gap: 10rem;
+}
+
+
+.icon{
+  display: none;
+  font-size: xx-large;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1150px) {
+  .job img{
+  display: block;
+  }
+  .job .info{
+  position: relative;
+  top: 50%;
+  left: 10%;
+  padding: 2rem;
+  }
+  .job.wide .info{
+  position: relative;
+  top: 50%;
+  left: 10%;
+  padding: 2rem;
+  }
+  .job{
+    flex-direction: column;
+  }
+  .project{
+    flex-direction: column;
+  }
+  .projects :nth-child(2){
+    flex-direction: column;
+  }
+  
+  .nav{
+    justify-content: space-around;
+    max-width: 100%;
+  }
+
+  .icon{
+    display: block;
+  }
+  .navMenu{
+    position: fixed;
+    left: -100%;
+    top: 60px;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--second-color);
+    width: 100%;
+    align-items: center;
+    transition: 0.7sec ease-in;
+  }
+
+  .navMenu :nth-child(2){
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  }
+
+  .navMenu.active{
+    left: 0;
+  }
+}
